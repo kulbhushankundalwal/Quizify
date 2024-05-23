@@ -1,6 +1,7 @@
 import { useState } from "react";
 import LoginForm from "../../components/Auth/LoginForm.jsx";
 import styles from "./auth.module.css";
+import logoFull from "../../assets/logo-full.png";
 import SignupForm from "../../components/Auth/SignupForm.jsx";
 
 const Auth = () => {
@@ -8,7 +9,7 @@ const Auth = () => {
   return (
     <div className={styles.authWrapper}>
       <div className={styles.auth}>
-        <h1>QUIZZIE</h1>
+        <img src={logoFull} className={styles.authLogo} alt="logo" />
 
         <div className={styles.choices}>
           <button

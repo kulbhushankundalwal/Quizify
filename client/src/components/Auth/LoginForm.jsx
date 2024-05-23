@@ -41,6 +41,7 @@ const LoginForm = () => {
       <div className={styles.Form}>
         <div className={styles.inputEntry}>
           <div className={styles.inputTitle}>Email</div>
+          <div></div>
           <input
             type="text"
             name="email"

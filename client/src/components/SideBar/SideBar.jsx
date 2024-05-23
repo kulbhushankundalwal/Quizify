@@ -73,7 +73,7 @@ const Sidebar = () => {
         className={`${styles.logout} ${showLinks ? "" : styles.show}`}
         onClick={() => {
           handleLogout();
-          closeMenu(); // Close menu when link is clicked
+          closeMenu(); 
         }}
       >
         Logout

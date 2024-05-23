@@ -18,7 +18,7 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #b3c4ff;
+  background-color: #d5defd;
 }
 
 th:last-child {
@@ -45,4 +45,19 @@ th:first-child {
 }
 .anchor {
   text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Hide S. No. and Created on columns */
+  th:nth-child(1),
+  td:nth-child(1),
+  th:nth-child(3),
+  td:nth-child(3) {
+    display: none;
+  }
 }
