@@ -124,7 +124,7 @@ const QuizForm2 = ({
                 )}
               </div>
             ))}
-          {questionData.length < 5 && (
+          {questionData.length < 10 && (
             <img
               src={plus}
               className={styles.plusQuestion}
@@ -132,7 +132,7 @@ const QuizForm2 = ({
             />
           )}
         </div>
-        <div> Max 5 questions</div>
+        <div></div>
       </div>
       <QuestionData
         data={selectedQuestionData}

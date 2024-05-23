@@ -45,13 +45,13 @@ const DashBoard = () => {
         />
       </div>
 
-      <div className={styles.wrapper}>
+      {/* <div className={styles.wrapper}>
         <h1>Quiz Analysis</h1>
 
         <AnalysisTableCard />
-      </div>
+      </div> */}
 
-      {/* <h1 className={styles.headingQuiz}>Trending Quizs</h1>
+      <h1 className={styles.headingQuiz}>Trending Quizzes</h1>
       <div className={styles.treadingQuiz}>
         {dashBoardData?.trendingQuizData?.map((trendingQuiz) => (
           <QuizCard
@@ -61,7 +61,7 @@ const DashBoard = () => {
             impressions={trendingQuiz.impressions}
           />
         ))}
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -45,7 +45,7 @@ const QuestionData = ({ data, setData, quizType }) => {
       <input
         type="text"
         className={styles.questionTitle}
-        placeholder="Poll Question"
+        placeholder="Write Question here!"
         value={data?.title}
         onChange={(e) =>
           setData((prev) => ({ ...prev, title: e.target.value }))

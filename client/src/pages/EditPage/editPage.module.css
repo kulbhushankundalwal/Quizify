@@ -4,12 +4,24 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(7px);
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: blurIn 0.2s forwards;
 }
 
+@keyframes blurIn {
+  from {
+    backdrop-filter: blur(0);
+    background-color: rgba(0, 0, 0, 0);
+  }
+  to {
+    backdrop-filter: blur(7px);
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+}
 .popupForm {
   width: 52.8rem;
   height: 25.3rem;

@@ -1,5 +1,3 @@
-/* sidebar.module.css */
-
 .sidebar {
   width: 12.0625rem;
   height: 100vh;
@@ -7,25 +5,40 @@
   text-align: center;
   color: #474444;
   padding: 0 1rem;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-weight: 600;
 }
 
-.sidebar h1 {
-  font-family: Jomhuria;
-  font-size: 70px;
-  margin-top: 1rem;
+.pointer{
+  cursor: pointer;
 }
 
-.elements {
+.logo {
+  height: 10rem;
+}
+
+.logoFull {
+  display: none;
+}
+
+.hamburger {
+  background: none;
+  width: 4rem;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.links {
   margin-top: 7rem;
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
+
   gap: 4rem;
   margin-bottom: 5rem;
 }
@@ -67,26 +80,50 @@
     top: 0;
     left: 0;
     z-index: 100;
-    flex-direction: row;
+    flex-direction: column;
     background-color: #fff;
   }
 
-  .sidebar h1 {
-    font-size: 32px;
-    margin-top: 0;
-    margin-right: auto;
+  .show {
+    display: none;
   }
 
-  .elements {
+  .logo {
+    display: none;
+  }
+
+  .logoFull {
+    display: block;
+    height: 2rem;
+  }
+
+  .line {
+    margin: 0%;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 0.75rem;
+    left: 0rem;
+  }
+
+  .links {
+    background-color: none;
+    display: none;
+    width: 100%;
+    margin-top: 3rem;
+  }
+
+  .links.show {
     display: flex;
-    flex-direction: row;
-    gap: 2rem;
-    margin-top: 0;
-    margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .logout {
-    margin: 0;
-    margin-left: auto;
+    margin-top: 0;
+    padding-top: 0;
   }
 }

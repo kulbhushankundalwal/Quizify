@@ -108,7 +108,7 @@ class UserService {
         .filter((q) => q.impressions > 10)
         .map((q) => ({
           _id: q._id,
-          quizName: this.userRepository.truncateQuizNameFn(q.quizName, 7),
+          quizName: this.userRepository.truncateQuizNameFn(q.quizName, 15),
           createdAt: this.userRepository.formatCreatedAt(q.createdAt),
           impressions: q.impressions,
         }));

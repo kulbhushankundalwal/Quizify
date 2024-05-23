@@ -10,7 +10,7 @@ const QuizCard = ({ quizName, createdAt, impressions }) => {
           <img src={Eye} />
         </div>
       </div>
-      <div className={styles.createdAt}>created on : {createdAt}</div>
+      <div className={styles.createdAt}>Created on : {createdAt}</div>
     </div>
   );
 };

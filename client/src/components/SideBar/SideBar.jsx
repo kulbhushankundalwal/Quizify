@@ -1,14 +1,17 @@
-import styles from "./sidebar.module.css";
-import logo from "../../assets/logo.png";
-import line from "../../assets/line.svg";
-import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { formContext } from "../../context/FormProvider";
-import { useNavigate } from "react-router-dom";
+import logo from "../../assets/logo.png";
+import logoFull from "../../assets/logo-full.png";
+import line from "../../assets/line.svg";
+import styles from "./sidebar.module.css";
 
 const Sidebar = () => {
+  const [showLinks, setShowLinks] = useState(false);
   const { showForm, setForm } = useContext(formContext);
+  const location = useLocation();
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -16,31 +19,63 @@ const Sidebar = () => {
     navigate("/auth");
   };
 
+  const closeMenu = () => {
+    setShowLinks(false);
+  };
+
   return (
     <div className={styles.sidebar}>
-      <img src={logo} alt="logo" />
-      <div className={styles.elements}>
+      <div className={styles.header}>
+        <img src={logo} alt="logo" className={styles.logo} />
+        <img src={logoFull} alt="logo" className={styles.logoFull} />
+        <button
+          className={styles.hamburger}
+          onClick={() => setShowLinks(!showLinks)}
+        >
+          ☰
+        </button>
+      </div>
+      <div className={`${styles.links} ${showLinks ? styles.show : ""}`}>
         <Link
           to="/dashboard"
           className={
             location.pathname === "/dashboard" ? styles.selectedSideBar : ""
           }
+          onClick={closeMenu}
         >
-          <div>Dashboard</div>
+          Dashboard
         </Link>
-        {/* <Link
+        <Link
           to="/analytics"
           className={
             location.pathname === "/analytics" ? styles.selectedSideBar : ""
           }
+          onClick={closeMenu}
         >
           <div>Analytics</div>
-        </Link> */}
-        <div onClick={() => setForm(!showForm)}>Create Quiz</div>
+        </Link>
+        <div
+          className={styles.pointer}
+          onClick={() => {
+            setForm(!showForm);
+            closeMenu();
+          }}
+        >
+          Create Quiz
+        </div>
       </div>
-
-      <img src={line} alt="line" className={styles.line} />
-      <div className={styles.logout} onClick={handleLogout}>
+      <img
+        src={line}
+        alt="line"
+        className={`${styles.line} ${showLinks ? "" : styles.show}`}
+      />
+      <div
+        className={`${styles.logout} ${showLinks ? "" : styles.show}`}
+        onClick={() => {
+          handleLogout();
+          closeMenu(); // Close menu when link is clicked
+        }}
+      >
         Logout
       </div>
     </div>
