@@ -1,0 +1,16 @@
+.app {
+  background: #ededed;
+}
+
+/* height: 100vh; */
+/**/
+/* display: flex; */
+/* align-items: center; */
+/* justify-content: center; */
+
+@media (max-width: 600px) {
+  .app {
+    height: 100vh;
+    width: 100vw;
+  }
+}

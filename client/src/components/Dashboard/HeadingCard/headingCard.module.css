@@ -1,0 +1,20 @@
+.card {
+  width: 12rem;
+  height: 12rem;
+  background-color: #fff;
+  border-radius: 0.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 1rem 2rem;
+}
+
+.numericValue {
+  font-size: 3.75rem;
+  margin: 0 0;
+  margin-top: 1rem;
+}
+
+.textValue {
+  margin-top: 0rem;
+}

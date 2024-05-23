@@ -1,0 +1,22 @@
+.timerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  position: absolute;
+  font-size: 1rem;
+
+  right: 5rem;
+  bottom: 5rem;
+}
+
+.timerBtn {
+  width: 5.9rem;
+  height: 2.1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  padding-top: 0.5rem;
+}

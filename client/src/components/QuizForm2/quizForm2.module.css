@@ -1,0 +1,142 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  color: #9f9f9f;
+  position: relative;
+}
+
+.questionCounter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 1rem 3.5rem;
+}
+
+.qCount {
+  display: flex;
+  gap: 0.5rem;
+}
+.qNum {
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 50%;
+  background: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  margin-left: 0.7rem;
+  position: relative;
+}
+.plusQuestion {
+  margin-top: 1rem;
+}
+.questionTitle {
+  width: 42rem;
+  height: 3.125rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  margin: 1rem 4rem;
+}
+
+.choiceType {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-around;
+  gap: 1.5rem;
+  margin: 1rem 4.3rem;
+}
+.optionsToChoose {
+  height: 20rem;
+}
+.option {
+  display: flex;
+  margin: 1rem 0;
+  gap: 1rem;
+  margin: 1rem 2rem;
+  position: relative;
+}
+
+.optionInput {
+  border: none;
+  width: 18.5rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  font-size: 1.2rem;
+}
+
+.addOption {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+  width: 19.5rem;
+  height: 3rem;
+  margin-left: 4.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.buttons {
+  width: 100%;
+  display: flex;
+  gap: 2.2rem;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.buttonStyle {
+  border: none;
+  width: 17rem;
+  height: 2.8rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.25);
+  font-size: 1.2rem;
+}
+
+.crossBtn {
+  position: absolute;
+  right: 0rem;
+  top: -0.4rem;
+}
+
+.deleteBucket {
+  padding-top: 1rem;
+  /* position: absolute; */
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.optionRadio {
+  margin: 0;
+  background-color: #d9d9d9;
+  width: 1rem;
+}
+
+.poll {
+  margin-left: 2rem;
+}
+
+.selectedQuestion {
+  border: 0.1rem solid #d9d9d9;
+}
+
+.correctAnswerStyle {
+  background-color: #60b84b;
+  color: #fff;
+  border-radius: 0.625rem;
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.15);
+}
+
+.correctAnswerStyle::placeholder {
+  color: #fff;
+}

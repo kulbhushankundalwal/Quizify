@@ -1,0 +1,27 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupForm {
+  width: 52.8rem;
+  height: 25.3rem;
+  flex-shrink: 0;
+  border-radius: 1.2rem;
+  background: #fff;
+}
+
+.popupForm2 {
+  width: 52.1rem;
+  height: 42rem;
+  flex-shrink: 0;
+  border-radius: 1.2rem;
+  background: #fff;
+}
