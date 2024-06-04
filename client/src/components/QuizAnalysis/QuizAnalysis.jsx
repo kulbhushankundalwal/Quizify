@@ -42,28 +42,32 @@ const QuizAnalysis = () => {
               <div className={styles.options}>
                 <div className={styles.optionCard}>
                   <div className={styles.Answer}>
-                    {`${QuizAnalysis?.questions[i].correctAttempt +
+                    {`${
+                      QuizAnalysis?.questions[i].correctAttempt +
                       QuizAnalysis?.questions[i].incorrectAttempt
-                      }`}
+                    }`}
                   </div>
                   <div className={styles.optionTitle}>
-                    people Attempted the questions
+                    People attempted the questions
                   </div>
                 </div>
                 <div className={styles.optionCard}>
-                  <div className={styles.Answer}>
+                  <div className={styles.Answer} style={{ color: "green" }}>
                     {QuizAnalysis.questions[i].correctAttempt}
                   </div>
-                  <div className={styles.optionTitle}>
-                    people Answered Correctly
+                  <div
+                    className={styles.optionTitle}
+                    style={{ color: "green" }}
+                  >
+                    People answered correctly
                   </div>
                 </div>
                 <div className={styles.optionCard}>
-                  <div className={styles.Answer}>
+                  <div className={styles.Answer} style={{ color: "red" }}>
                     {QuizAnalysis.questions[i].incorrectAttempt}
                   </div>
-                  <div className={styles.optionTitle}>
-                    people Answered incorrectly
+                  <div className={styles.optionTitle} style={{ color: "red" }}>
+                    People answered incorrectly
                   </div>
                 </div>
               </div>
@@ -73,7 +77,7 @@ const QuizAnalysis = () => {
               <div className={styles.options}>
                 {QuizAnalysis.questions[i].map((v, x) => (
                   <div className={styles.pollCard} key={x}>
-                    <div className={styles.pollAnswer}>{v} </div>
+                    <div className={styles.pollAnswer} >{v} </div>
                     <div className={styles.optionTitle}>Option {x + 1} </div>
                   </div>
                 ))}
